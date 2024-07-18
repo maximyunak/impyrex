@@ -1,0 +1,294 @@
+@import '../utils/variables.scss';
+
+.simular {
+  margin-top: 30px;
+  // overflow: hidden;
+
+  .swiper-simular {
+    margin-top: 15px;
+    // width: 100% !important;
+    overflow: hidden;
+    // width: 90%;
+    margin: 15px auto 0;
+
+    @media (min-width: 1650px) {
+      width: 92%;
+    }
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  .simular-prev,
+  .simular-next {
+    display: inline;
+    padding: 11px 16px;
+    background-color: $acent;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateY(50%, -50%);
+    top: 50%;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    @media (max-width: 1650px) {
+      display: none;
+    }
+  }
+
+  .simular-prev {
+    left: 0px;
+  }
+
+  .simular-next {
+    right: 0px;
+  }
+
+  &__slide {
+    cursor: pointer;
+    border: 1px solid #e4ddd5;
+    width: 358px;
+    border-radius: 8px;
+    // height: 376px;
+
+    @media (min-width: 1350px) {
+      width: auto;
+    }
+    @media (max-width: 1150px) {
+      // width: auto;
+      width: 100%;
+      height: auto !important;
+    }
+    @media (max-width: 540px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media (max-width: 480px) {
+      width: 100%;
+    }
+
+    &-img {
+      position: relative;
+    }
+
+    .company__logo {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+
+      img {
+        width: 70px;
+        border-radius: 8px;
+        @media (max-width: 500px) {
+          width: 50px;
+        }
+      }
+    }
+    .car-img {
+      width: 358px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      @media (max-width: 1150px) {
+        width: 100%;
+        height: 200px;
+      }
+      @media (max-width: 770px) {
+        height: auto;
+      }
+    }
+    .car-text {
+      padding: 10px;
+
+      gap: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      @media (max-width: 770px) {
+        // height: auto !important;
+      }
+      .car__brand {
+        font-size: 18px;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+      .car__info {
+        background-color: $darkgray;
+        border-radius: 8px;
+        padding: 20px;
+      }
+
+      .car__price {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+          font-size: 14px;
+          font-weight: 400;
+          color: #9d948a;
+        }
+        h1 {
+          font-size: 20px;
+          font-weight: 500;
+          margin-top: 12px;
+        }
+        h2 {
+          font-size: 16px;
+          font-weight: 400;
+          margin-top: 12px;
+        }
+      }
+
+      .social {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        @media (max-width: 1150px) {
+          width: 100%;
+        }
+      }
+
+      .contacts {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        @media (max-width: 400px) {
+          .phone,
+          .whatsapp,
+          .reservation {
+            width: 100% !important;
+          }
+        }
+
+        @media (max-width: 770px) {
+          flex-direction: column;
+        }
+
+        .phone {
+          background-color: #5291f0;
+          // padding: 16px 16px;
+          // width: 100%;
+          width: 45px !important;
+          height: 45px !important;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          img {
+            width: 25px;
+            height: 25px;
+            // height: 32px;
+            border-radius: 0 !important;
+          }
+          @media (max-width: 1650px) {
+            height: 50px;
+            width: 50px;
+          }
+          @media (max-width: 1150px) {
+            width: 100% !important;
+          }
+        }
+
+        .whatsapp {
+          background-color: #12a108;
+          padding: 16px 0;
+          height: 45px;
+          width: 45px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          img {
+            width: 25px;
+            border-radius: 0 !important;
+            height: 25px;
+          }
+          @media (max-width: 1650px) {
+            height: 50px;
+            width: 50px;
+          }
+          @media (max-width: 1150px) {
+            width: 100%;
+          }
+        }
+
+        .reservation {
+          background-color: $acent;
+          // width: 100%;
+          padding: 0 10px;
+          height: 45px;
+          border-radius: 8px;
+          @media (max-width: 1650px) {
+            height: 50px;
+            // width: 50px;
+            padding: 0 18px;
+          }
+          @media (max-width: 450px) {
+            width: 100%;
+          }
+          @media (max-width: 370px) {
+            font-size: 14px;
+          }
+        }
+        @media (max-width: 430px) {
+          .phone {
+            padding: 10px 0;
+            height: 40px;
+          }
+          .whatsapp {
+            padding: 10px 0;
+            height: 40px;
+          }
+          .reservation {
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.company__tag {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  background-color: $darkgray;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+
+  @media (max-width: 370px) {
+    font-size: 10px;
+    img {
+      width: 15px !important;
+    }
+  }
+
+  img {
+    width: 19px;
+  }
+}
+
+.company__tags {
+  position: absolute;
+  z-index: 9999;
+  left: 14px;
+  top: 14px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.second__tag {
+  @media (max-width: 660px) {
+    display: none;
+  }
+}

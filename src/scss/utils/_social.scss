@@ -1,0 +1,78 @@
+@import './variables.scss';
+
+.social__media {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  z-index: 999999999;
+
+  .social__hidden {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 10px;
+    transition: 0.3s;
+  }
+
+  .visible {
+    background-color: $acent;
+    position: relative;
+    transition: 0.3s;
+
+    .social__close {
+      display: none;
+    }
+  }
+  &.active {
+    .visible {
+      background-color: #f05252;
+    }
+    .social__hidden {
+      opacity: 1;
+      visibility: visible;
+      bottom: 70px;
+    }
+
+    .social__close {
+      display: block;
+    }
+    .social__message {
+      display: none;
+    }
+  }
+
+  .icon__block {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .green {
+    background-color: #12a108;
+  }
+
+  .blue {
+    background-color: #26a5e4;
+    img {
+      margin-left: -3px;
+    }
+  }
+
+  .acent {
+    background-color: $acent;
+  }
+}

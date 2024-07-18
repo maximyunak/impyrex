@@ -1,0 +1,143 @@
+@import '../utils/variables.scss';
+
+.brands {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding-bottom: 60px;
+  background-color: $darkgray;
+
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 38px;
+      font-weight: 900;
+    }
+
+    @media (max-width: 550px) {
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 26px !important;
+      }
+    }
+
+    @media (max-width: 390px) {
+      h1 {
+        font-size: 22px !important;
+      }
+    }
+    @media (max-width: 635px) {
+      h1 {
+        font-size: 22px !important;
+      }
+    }
+  }
+
+  .show-more {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: $acent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 550;
+    color: #fff;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 900px) {
+      font-size: 13px;
+    }
+
+    @media (max-width: 390px) {
+      padding: 8px 12px !important;
+    }
+  }
+
+  .brands_swiper {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  &__logos {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+
+  .brands-1 {
+    animation: ticker1 54s linear infinite;
+    animation-delay: -54s;
+  }
+
+  .brands-2 {
+    animation: ticker2 54s linear infinite;
+    animation-delay: -27s;
+  }
+
+  .logo-block {
+    cursor: pointer;
+    background: url(../../../public/assets/brands/bg.png) no-repeat;
+
+    width: 256px !important;
+    height: 256px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 59px;
+    padding-bottom: 45px;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 16px;
+
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #171717;
+      text-transform: uppercase;
+      font-weight: 550;
+    }
+
+    .mers img {
+      // margin-top: 30px;
+    }
+  }
+}
+.audi,
+.bentley {
+  img {
+    margin-top: 20px;
+  }
+}
+
+@keyframes ticker1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes ticker2 {
+  0% {
+    transform: translateX(0%);
+  } /* Начинаем с правого края */
+  100% {
+    transform: translateX(-200%);
+  } /* Заканчиваем на середине */
+}
