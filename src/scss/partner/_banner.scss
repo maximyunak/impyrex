@@ -1,0 +1,48 @@
+@import '../utils/variables.scss';
+
+.banner {
+  margin-top: 60px;
+  background: url(../../../temple/images/partner/Rectangle\ 41518about.png);
+  height: 457px;
+  color: #fff;
+  @media (max-width: 550px) {
+    height: 380px;
+  }
+  &__container {
+    h1 {
+      padding-top: 110px;
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 45.6px;
+      text-align: left;
+      @media (max-width: 550px) {
+        padding-top: 50px;
+      }
+      @media (max-width: 480px) {
+        font-size: 27px;
+        line-height: 30px;
+      }
+      // max-width: 390px;
+    }
+    h4 {
+      font-size: 24px;
+      font-weight: 550;
+      line-height: 28.8px;
+      text-align: left;
+      max-width: 500px;
+      margin-top: 15px;
+      @media (max-width: 480px) {
+        font-size: 20px;
+      }
+    }
+
+    a {
+      margin-top: 25px;
+      background-color: $acent;
+      padding: 12px 16px;
+      color: #fff;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  }
+}
