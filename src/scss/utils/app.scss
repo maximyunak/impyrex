@@ -76,3 +76,26 @@ body {
     background-color: #4178cb !important;
   }
 }
+
+.opacity {
+  cursor: pointer;
+  transition: 0.3s !important;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 45.6px;
+
+  @media (max-width: 560px) {
+    text-align: center;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 30px;
+  }
+}
