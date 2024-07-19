@@ -19,7 +19,7 @@
   &__flex {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 124px;
+    gap: 120px;
     justify-content: space-between;
     @media (max-width: 1470px) {
       gap: 100px;

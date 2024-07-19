@@ -1,0 +1,247 @@
+@import '../utils/variables.scss';
+
+.form {
+  margin-top: 80px;
+  background: url(../../../temple/images/contacts/Mask\ groupcont-bg.svg) no-repeat center center;
+  @media (max-width: 1100px) {
+    margin-top: 50px;
+  }
+  &__container {
+  }
+
+  &__title {
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 45.6px;
+    text-align: center;
+  }
+
+  &__cards {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    gap: 60px;
+    @media (max-width: 1160px) {
+      gap: 30px;
+    }
+    @media (max-width: 640px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+
+  &__card {
+    // margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+
+    img {
+      @media (max-width: 550px) {
+        width: 50px;
+      }
+    }
+  }
+
+  &__social-icons {
+    margin-top: 80px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    img {
+      width: 44px;
+      border: 5px solid #504b45;
+      border-radius: 11px;
+    }
+  }
+
+  &__questions {
+    margin-top: 60px;
+    // text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+.card {
+  &__title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40.8px;
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  &__desc {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.8px;
+  }
+
+  &__line {
+    margin-top: 10px;
+    width: 1px;
+    height: 184px;
+    background-color: #e4ddd530;
+    @media (max-width: 640px) {
+      width: 180px;
+      height: 1px;
+    }
+  }
+
+  @media (max-width: 1160px) {
+    &__title {
+      font-size: 28px;
+      line-height: 30px;
+    }
+    &__desc {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+  @media (max-width: 710px) {
+    &__title {
+      font-size: 20px;
+    }
+    &__desc {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 550px) {
+    &__title {
+      font-size: 17px;
+      line-height: 18px;
+    }
+    &__desc {
+      font-size: 14px;
+    }
+  }
+}
+.questions {
+  &__title {
+    font-size: 22px;
+    max-width: 410px;
+    font-weight: 700;
+    line-height: 30.8px;
+    text-align: center;
+    @media (max-width: 450px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  &__block {
+    // width: 100%;
+    h5 {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 13.93px;
+      color: rgba(157, 148, 138, 1);
+    }
+    input,
+    textarea {
+      width: 600px;
+      background-color: $darkgray;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin-top: 10px;
+      transition: 0.3s;
+
+      &:placeholder {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 17.91px;
+        color: #9d948a66;
+      }
+
+      &:focus {
+        background-color: #313131;
+      }
+
+      @media (max-width: 640px) {
+        width: 100%;
+      }
+      @media (max-width: 450px) {
+        padding: 12px;
+      }
+    }
+    textarea {
+      resize: none;
+      outline: 0;
+      height: 166px;
+    }
+    @media (max-width: 640px) {
+      width: 100%;
+    }
+  }
+}
+.question {
+  &__send {
+    margin-top: 62px;
+    background-color: $acent;
+    padding: 12px 22px;
+    color: #fff;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 19.76px;
+    text-align: center;
+    @media (max-width: 750px) {
+      margin-top: 20px;
+    }
+    @media (max-width: 560px) {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+}
+
+.thanks {
+  background-color: #00000080;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 99999999999999999;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  &__text {
+    width: 488px;
+    height: 446px;
+    background-color: $darkgray;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    border-radius: 16px;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media (max-width: 740px) {
+      width: 80%;
+    }
+    @media (max-width: 500px) {
+      width: 95%;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

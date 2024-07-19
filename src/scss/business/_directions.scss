@@ -1,0 +1,53 @@
+@import '../utils/variables.scss';
+
+.directions {
+  margin-top: 50px;
+  @media (max-width: 600px) {
+    margin-top: 30px;
+  }
+  &__container {
+  }
+
+  &__cards {
+    margin-top: 25px;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__card {
+    width: 329px;
+    height: 176px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+    @media (max-width: 365px) {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 550;
+      line-height: 28.8px;
+    }
+  }
+
+  .withv {
+    background: url(../../../temple/images/business/Rectangle\ 41679voditelem.png) no-repeat center;
+    box-sizing: cover;
+  }
+  .boat {
+    background: url(../../../temple/images/business/Rectangle\ 41680boat.png) no-repeat center;
+    box-sizing: cover;
+  }
+  .fish {
+    background: url(../../../temple/images/business/Rectangle\ 41681fish.png) no-repeat center;
+    box-sizing: cover;
+  }
+  .safari {
+    background: url(../../../temple/images/business/Rectangle\ 41682safari.png) no-repeat center;
+    box-sizing: cover;
+  }
+}

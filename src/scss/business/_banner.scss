@@ -2,7 +2,9 @@
 
 .banner {
   margin-top: 60px;
-  background: url(../../../temple/images/business/Rectangle\ 41519bg-bsn.png);
+  background: url(../../../temple/images/business/Rectangle\ 41519bg-bsn.png) center;
+  background-size: cover;
+
   height: 457px;
   color: #fff;
   @media (max-width: 550px) {

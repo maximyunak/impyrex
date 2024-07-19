@@ -1,1 +1,125 @@
 @import '../utils/variables.scss';
+
+.advantages {
+  margin-top: 80px;
+  background: url(../../../temple/images/business/Group\ 1261153369uae-bg.png) no-repeat right
+    center;
+
+  background-position: right 320px;
+  @media (max-width: 885px) {
+    background: none;
+    margin-top: 50px;
+  }
+  @media (max-width: 600px) {
+    margin-top: 30px;
+  }
+  &__container {
+  }
+
+  &__desc {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30.8px;
+
+    @media (max-width: 700px) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+    @media (max-width: 400px) {
+      font-size: 15px;
+      line-height: 17px;
+    }
+  }
+
+  &__card {
+    margin-top: 50px;
+    width: 845px;
+    background-color: $darkgray;
+    border-radius: 10px;
+    padding: 30px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 33.6px;
+    }
+
+    ul {
+      margin-top: 25px;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      li {
+        list-style-type: disc;
+
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 30.8px;
+      }
+    }
+    @media (max-width: 885px) {
+      width: 100%;
+
+      ul {
+        padding-left: 0px;
+        li {
+          font-size: 19px;
+          line-height: 22px;
+        }
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    @media (max-width: 555px) {
+      margin-top: 20px;
+      padding: 20px 10px;
+      ul {
+        li {
+          list-style-position: inside;
+
+          font-size: 16px;
+        }
+      }
+      h2 {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+    @media (max-width: 400px) {
+      ul {
+        margin-top: 10px;
+        li {
+          font-size: 14px;
+        }
+      }
+      h2 {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.link {
+  margin-top: 40px;
+  background-color: $acent;
+  padding: 21px 31px;
+  color: #fff;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 19.76px;
+  text-align: center;
+  @media (max-width: 750px) {
+    margin-top: 20px;
+  }
+  @media (max-width: 560px) {
+    padding: 15px;
+    font-size: 15px;
+  }
+}
