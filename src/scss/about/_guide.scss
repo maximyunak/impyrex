@@ -1,0 +1,85 @@
+@import '../utils/variables.scss';
+
+.guide {
+  margin-top: 80px;
+  background-color: $darkgray;
+  padding: 50px 0;
+  &__container {
+  }
+
+  &__cards {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    // justify-content: space-between;
+    justify-content: center;
+  }
+
+  &__card {
+    background-color: #1b1a18;
+    padding: 20px 15px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    height: 177px;
+    width: 446px;
+
+    img {
+      width: 53px;
+      height: 72px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 28.8px;
+    }
+
+    h4 {
+      margin-top: 12px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+        line-height: 22px;
+      }
+      h4 {
+        margin-top: 7px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      gap: 15px;
+      img {
+        width: 40px;
+        height: 60px;
+      }
+    }
+  }
+}
+.title {
+}
+.orange {
+}
+.card-1 {
+}
+.card {
+  &__steps {
+  }
+}
+.card-2 {
+}
+.card-3 {
+}
+.card-4 {
+}
+.card-5 {
+}
+.card-6 {
+}

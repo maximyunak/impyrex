@@ -11,7 +11,7 @@
   &__cards {
     margin-top: 25px;
     display: flex;
-    gap: 32px;
+    gap: 28px;
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -28,6 +28,7 @@
     }
 
     h2 {
+      color: #fff;
       font-size: 24px;
       font-weight: 550;
       line-height: 28.8px;
