@@ -541,18 +541,23 @@
     &__time {
       margin-top: 30px;
 
+      h1 {
+        margin-bottom: 40px;
+      }
+
       .marquee {
+        margin-top: 50px;
         margin-top: 15px;
         display: flex;
         overflow: hidden !important;
 
         .swiper-slide {
           width: 161px !important;
+          // display: none !important;
         }
       }
 
       .tiker__block {
-        // margin-left: 10px;
         width: 161px;
         height: 106px;
         border-radius: 8px;
