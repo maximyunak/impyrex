@@ -1,4 +1,4 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .cards {
   margin-top: 50px;
@@ -19,7 +19,7 @@
   &__card {
     width: 446px;
     height: 446px;
-    background: url(../../../temple/images/icons/Rectangle\ 41651cards-bg.png) no-repeat;
+    background: url(../../../temple/images/icons/cards-bg.png) no-repeat;
     border-radius: 16px;
     object-fit: cover;
     color: #171717;

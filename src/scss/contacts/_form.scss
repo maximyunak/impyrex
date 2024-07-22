@@ -1,12 +1,11 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .form {
   margin-top: 80px;
-  background: url(../../../temple/images/contacts/Mask\ groupcont-bg.svg) no-repeat center center;
+  background: url(../../../temple/images/contacts/bg.svg) no-repeat center
+    center;
   @media (max-width: 1100px) {
     margin-top: 50px;
-  }
-  &__container {
   }
 
   &__title {

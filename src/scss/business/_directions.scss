@@ -1,4 +1,4 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .directions {
   margin-top: 50px;
@@ -36,19 +36,20 @@
   }
 
   .withv {
-    background: url(../../../temple/images/business/Rectangle\ 41679voditelem.png) no-repeat center;
+    background: url(../../../temple/images/business/voditelem.png) no-repeat
+      center;
     box-sizing: cover;
   }
   .boat {
-    background: url(../../../temple/images/business/Rectangle\ 41680boat.png) no-repeat center;
+    background: url(../../../temple/images/business/boat.png) no-repeat center;
     box-sizing: cover;
   }
   .fish {
-    background: url(../../../temple/images/business/Rectangle\ 41681fish.png) no-repeat center;
+    background: url(../../../temple/images/business/fish.png) no-repeat center;
     box-sizing: cover;
   }
   .safari {
-    background: url(../../../temple/images/business/Rectangle\ 41682safari.png) no-repeat center;
+    background: url(../../../temple/images/business/safari.png) no-repeat center;
     box-sizing: cover;
   }
 }

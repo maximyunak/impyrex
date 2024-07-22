@@ -200,7 +200,7 @@ const swiperBrands = new Swiper(".marquee", {
   centeredSlides: true,
   // slidesPerView: 3,
   slidesPerView: "auto",
-  // spaceBetween: 20,
+  spaceBetween: 20,
   freeMode: true,
   easing: "linear",
   mousewheel: true,
