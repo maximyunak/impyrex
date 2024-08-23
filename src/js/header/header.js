@@ -1,4 +1,5 @@
 import '../../scss/utils/app.scss';
+import '/src/js/_jquery';
 
 const modalTriggers = document.querySelectorAll('.with-modal');
 let activeModal = null; // Переменная для отслеживания активного модального окна
@@ -107,24 +108,6 @@ menu.addEventListener('click', (e) => {
 navbar.addEventListener('click', (e) => {
   e.stopPropagation();
 });
-
-// const loginModalLg = document.querySelector('.login__modal-lg');
-
-// const loginModalTriggerLg = document.querySelector('.login__modal-trigger-lg');
-
-// // const modalRows = loginModal.querySelectorAll('.modal__row');
-
-// loginModalTriggerLg.addEventListener('click', () => {
-//   loginModalLg.classList.toggle('active');
-
-//   modalTriggers.forEach((trigger) => {
-//     const modal = trigger.querySelector('.modal');
-//     const triangle = trigger.querySelector('.triangle');
-
-//     modal.classList.remove('active');
-//     triangle.classList.remove('active');
-//   });
-// });
 
 languages.forEach((lang) => {
   lang.addEventListener('click', () => {

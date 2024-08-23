@@ -2,8 +2,9 @@
 
 @import url(./_banner.scss);
 @import url(./_flags.scss);
-@import url(../partner/_faq.scss);
+// @import url(../partner/_faq.scss);
 @import url(./_types.scss);
+@import url(../utils/lightFaq.scss);
 
 body {
   background-color: #fff !important;

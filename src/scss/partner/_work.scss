@@ -1,4 +1,4 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .work {
   margin-top: 110px;
@@ -18,9 +18,6 @@
       @media (max-width: 530px) {
         font-size: 20px;
         text-align: center;
-        span {
-          height: 16px !important;
-        }
       }
     }
 

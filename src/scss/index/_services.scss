@@ -1,4 +1,4 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .services {
   &__title {
@@ -24,8 +24,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url(../../../temple/images/landing/services/service-bg.png) center center
-        no-repeat;
+      background: url(/public/temple/images/landing/services/service-bg.png)
+        center center no-repeat;
       border-radius: 8px;
 
       a {

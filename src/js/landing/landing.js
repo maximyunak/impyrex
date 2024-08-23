@@ -1,37 +1,45 @@
-import '../../scss/index/landing.scss';
+import "../../scss/index/landing.scss";
+import "/src/js/custom/faq/faq.js";
 
-const styleEl = document.createElement('style');
-styleEl.innerText = '';
+const styleEl = document.createElement("style");
+styleEl.innerText = "";
 
-import Swiper from 'swiper';
-import { Autoplay, Navigation, Pagination, FreeMode, Mousewheel } from 'swiper/modules';
+import Swiper from "swiper";
+import {
+  Autoplay,
+  Navigation,
+  Pagination,
+  FreeMode,
+  Mousewheel,
+} from "swiper/modules";
 // import Swiper and modules styles
-import 'swiper/css';
+import "swiper/css";
 // import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-styleEl.innerText += '.swiper-wrapper { transition-timing-function: linear !important }';
+import "swiper/css/pagination";
+styleEl.innerText +=
+  ".swiper-wrapper { transition-timing-function: linear !important }";
 
 // init Swiper:
-const swiper = new Swiper('#car-slider', {
+const swiper = new Swiper("#car-slider", {
   // configure Swiper to use modules
   modules: [Navigation, Pagination],
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
   },
   loop: true,
 });
 
-const swiperBig = new Swiper('#special-offers', {
+const swiperBig = new Swiper("#special-offers", {
   // configure Swiper to use modules
   modules: [Navigation, Pagination],
   loop: true,
   navigation: {
-    nextEl: '.btn-next-big',
-    prevEl: '.btn-prev-big',
+    nextEl: ".btn-next-big",
+    prevEl: ".btn-prev-big",
   },
   slidesPerView: 3,
   breakpoints: {
@@ -56,18 +64,18 @@ const swiperBig = new Swiper('#special-offers', {
   },
 });
 
-const swiperBrands = new Swiper('.brands_swiper', {
+const swiperBrands = new Swiper(".brands_swiper", {
   // Optional parameters
   // direction: 'vertical',
   modules: [Autoplay, FreeMode, Mousewheel],
 
-  speed: 2600,
+  speed: 7000,
   loop: true,
   centeredSlides: true,
   slidesPerView: 3,
   spaceBetween: 20,
   freeMode: true,
-  easing: 'linear',
+  easing: "linear",
   mousewheel: true,
   spaceBetween: 30,
   breakpoints: {
@@ -109,30 +117,12 @@ const swiperBrands = new Swiper('.brands_swiper', {
 //   });
 // });
 
-const selects = document.querySelectorAll('.faq__select');
-
-selects.forEach((select) => {
-  select.addEventListener('click', () => {
-    // Проверяем, активен ли селект
-    if (select.classList.contains('active')) {
-      // Если активен, скрываем его
-      select.classList.remove('active');
-    } else {
-      // Если не активен, скрываем все остальные и активируем текущий
-      selects.forEach((active) => {
-        active.classList.remove('active');
-      });
-      select.classList.add('active');
-    }
-  });
-});
-
-const likes = document.querySelectorAll('.swiper-mini-like');
+const likes = document.querySelectorAll(".swiper-mini-like");
 
 likes.forEach((like) => {
-  like.addEventListener('click', () => {
-    like.classList.toggle('active');
+  like.addEventListener("click", () => {
+    like.classList.toggle("active");
   });
 });
 
-document.querySelector('head').append(styleEl);
+document.querySelector("head").append(styleEl);

@@ -1,11 +1,11 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .company {
   margin-top: 80px;
   color: #fff;
 
   &__info {
-    background: url(../../../temple/images/landing/services/work-bg.png) center;
+    background: url(/public/temple/images/landing/services/work-bg.png) center;
     border-radius: 26px;
     padding-top: 76px;
     height: 351px;

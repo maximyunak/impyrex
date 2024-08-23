@@ -1,4 +1,4 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .brands {
   margin-top: 80px;
@@ -88,7 +88,7 @@
 
   .logo-block {
     cursor: pointer;
-    background: url(../../../public/assets/brands/bg.png) no-repeat;
+    background: url(/assets/brands/bg.png) no-repeat;
 
     width: 256px !important;
     height: 256px;
@@ -110,10 +110,6 @@
       color: #171717;
       text-transform: uppercase;
       font-weight: 550;
-    }
-
-    .mers img {
-      // margin-top: 30px;
     }
   }
 }

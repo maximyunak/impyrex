@@ -1,4 +1,4 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .guide {
   margin-top: 80px;
@@ -46,6 +46,7 @@
     }
 
     @media (max-width: 480px) {
+      height: 146px;
       h1 {
         font-size: 20px;
         line-height: 22px;
@@ -60,6 +61,9 @@
         width: 40px;
         height: 60px;
       }
+    }
+    @media (max-width: 345px) {
+      height: 166px;
     }
   }
 }

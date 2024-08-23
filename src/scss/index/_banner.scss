@@ -1,4 +1,4 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .header {
   background: #151411;
@@ -6,7 +6,8 @@
 
 .banner {
   margin-top: 60px;
-  background: url(../../../temple/images/landing/banner/bg.jpg) center center no-repeat;
+  background: url(/public/temple/images/landing/banner/bg.jpg) center center
+    no-repeat;
   background-size: cover;
   // height: 566px;
 
@@ -89,9 +90,25 @@
       }
 
       &::placeholder {
-        color: rgba(170, 181, 197, 1);
+        color: #fff;
       }
     }
+    input::-webkit-input-placeholder {
+      color: #fff;
+    }
+
+    input::-moz-placeholder {
+      color: #fff;
+    }
+
+    input:-ms-input-placeholder {
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: #fff;
+    }
+
     button {
       background-color: $acent;
       padding: 21px 26px;

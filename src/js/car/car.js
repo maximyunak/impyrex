@@ -1,118 +1,35 @@
-import "../../scss/car/carinfo.scss";
+import '../../scss/car/carinfo.scss';
+// import '/src/js/custom/faq/faq.js';
 
-const styleEl = document.createElement("style");
-styleEl.innerText = "";
+const styleEl = document.createElement('style');
+styleEl.innerText = '';
 
-const share = document.querySelector(".icon-share");
+import 'swiper/css/pagination';
 
-const hidden = document.querySelector(".hidden");
+const share = document.querySelector('.icon-share');
 
-document.addEventListener("click", () => {
-  hidden.classList.remove("active");
+const hidden = document.querySelector('.hidden');
+
+document.addEventListener('click', () => {
+  hidden.classList.remove('active');
 });
 
-share.addEventListener("click", (e) => {
+share.addEventListener('click', (e) => {
   e.stopPropagation();
-  hidden.classList.toggle("active");
+  hidden.classList.toggle('active');
 });
 
-hidden.addEventListener("click", (e) => {
+hidden.addEventListener('click', (e) => {
   e.stopPropagation();
 });
 
 // swiper
-import Swiper from "swiper";
-import "swiper/css";
-styleEl.innerText +=
-  ".swiper-wrapper { transition-timing-function: linear !important }";
-import {
-  Autoplay,
-  FreeMode,
-  Mousewheel,
-  Navigation,
-  Thumbs,
-} from "swiper/modules";
+import Swiper from 'swiper';
+import 'swiper/css';
+styleEl.innerText += '.swiper-wrapper { transition-timing-function: linear !important }';
+import { Autoplay, FreeMode, Mousewheel, Navigation, Pagination, Thumbs } from 'swiper/modules';
 
-const logoBlocks = document.querySelectorAll(".tiker__block");
-const tiket1 = document.querySelector(".marquee__tiker-1");
-const tiket2 = document.querySelector(".marquee__tiker-2");
-
-if (tiket1 && tiket2) {
-  logoBlocks.forEach((block) => {
-    block.addEventListener("mouseover", () => {
-      tiket1.style.animationPlayState = "paused";
-      tiket2.style.animationPlayState = "paused";
-    });
-
-    block.addEventListener("mouseout", () => {
-      tiket1.style.animationPlayState = "running";
-      tiket2.style.animationPlayState = "running";
-    });
-  });
-} else {
-  console.error("tiket1 or tiket2 is not found in the DOM");
-}
-
-const selects = document.querySelectorAll(".select__info");
-
-selects.forEach((select) => {
-  const trigger = select.querySelector(".trigger"); // Исправлено: добавил класс
-
-  select.addEventListener("click", () => {
-    // Сначала закрываем все активные селекты
-    selects.forEach((activeSelect) => {
-      if (
-        activeSelect !== select &&
-        activeSelect.classList.contains("active")
-      ) {
-        activeSelect.classList.remove("active");
-      }
-    });
-
-    // Затем переключаем состояние текущего селекта
-    select.classList.toggle("active");
-  });
-});
-
-const swiperSimular = new Swiper(".swiper-simular", {
-  modules: [Navigation, Autoplay],
-  // Optional parameters
-  loop: true,
-  spaceBetween: 20,
-  slidesPerView: 1,
-  // centeredSlides: true,
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".simular-next",
-    prevEl: ".simular-prev",
-  },
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
-
-  breakpoints: {
-    1650: {
-      centeredSlides: true,
-      slidesPerView: 4,
-    },
-    1350: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-    },
-    1150: {
-      slidesPerView: 3,
-    },
-
-    540: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-  },
-});
-
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper('.mySwiper', {
   spaceBetween: 10,
   slidesPerView: 4,
   freeMode: true,
@@ -129,12 +46,12 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-var swiper2 = new Swiper(".mySwiper2", {
+var swiper2 = new Swiper('.mySwiper2', {
   modules: [Thumbs, Navigation],
   spaceBetween: 20,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   thumbs: {
     swiper: swiper,
@@ -143,25 +60,25 @@ var swiper2 = new Swiper(".mySwiper2", {
 
 // hover nav
 
-const slider = document.querySelector(".mySwiper2");
+const slider = document.querySelector('.mySwiper2');
 
-const next = document.querySelector(".swiper-button-next");
-const prev = document.querySelector(".swiper-button-prev");
+const next = document.querySelector('.swiper-button-next');
+const prev = document.querySelector('.swiper-button-prev');
 
-slider.addEventListener("mouseover", () => {
-  next.classList.add("hover");
-  prev.classList.add("hover");
+slider.addEventListener('mouseover', () => {
+  next.classList.add('hover');
+  prev.classList.add('hover');
 });
 
-slider.addEventListener("mouseleave", () => {
-  next.classList.remove("hover");
-  prev.classList.remove("hover");
+slider.addEventListener('mouseleave', () => {
+  next.classList.remove('hover');
+  prev.classList.remove('hover');
 });
 
 // resize
 
 function alignCarTextHeight() {
-  const carTextElements = document.querySelectorAll(".car-text");
+  const carTextElements = document.querySelectorAll('.car-text');
 
   let maxHeight = 0;
 
@@ -175,7 +92,7 @@ function alignCarTextHeight() {
 
   // Устанавливаем максимальную высоту для всех элементов `.car-text`
   carTextElements.forEach((element) => {
-    element.style.height = maxHeight + "px";
+    element.style.height = maxHeight + 'px';
   });
 }
 
@@ -184,70 +101,70 @@ function handleResize() {
 }
 
 // Вызываем функцию при загрузке страницы
-window.addEventListener("load", alignCarTextHeight);
+window.addEventListener('load', alignCarTextHeight);
 
 // Дополнительно:
 // Вызываем функцию при изменении размера окна, чтобы подстроиться под изменения
-window.addEventListener("resize", handleResize);
+window.addEventListener('resize', handleResize);
 
-const swiperBrands = new Swiper(".marquee", {
+const swiperBrands = new Swiper('.marquee', {
   // Optional parameters
   // direction: 'vertical',
   modules: [Autoplay, Mousewheel, FreeMode],
 
-  speed: 2600,
+  speed: 7000,
   loop: true,
   centeredSlides: true,
   // slidesPerView: 3,
-  slidesPerView: "auto",
+  slidesPerView: 'auto',
   spaceBetween: 20,
   freeMode: true,
-  easing: "linear",
+  easing: 'linear',
   mousewheel: true,
   // spaceBetween: 10,
   breakpoints: {
     1400: {
-      // slidesPerView: 3.8,
+      slidesPerView: 3.8,
     },
 
-    // 1330: {
-    //   slidesPerView: 8,
-    // },
+    1330: {
+      slidesPerView: 8,
+    },
 
-    // 1280: {
-    //   slidesPerView: 7,
-    // },
+    1280: {
+      slidesPerView: 7,
+    },
 
-    // 1200: {
-    //   slidesPerView: 7,
-    // },
-    // 1120: {
-    //   slidesPerView: 6.5,
-    // },
-    // 1120: {
-    //   slidesPerView: 6,
-    // },
-    // 930: {
-    //   slidesPerView: 5,
-    // },
-    // 840: {
-    //   slidesPerView: 4.5,
-    // },
-    // 760: {
-    //   slidesPerView: 4,
-    // },
-    // 630: {
-    //   slidesPerView: 3.5,
-    // },
-    // 560: {
-    //   slidesPerView: 3,
-    // },
-    // 400: {
-    //   slidesPerView: 2.5,
-    // },
-    // 320: {
-    //   slidesPerView: 1.5,
-    // },
+    1200: {
+      slidesPerView: 7,
+    },
+    1120: {
+      slidesPerView: 6.5,
+    },
+    1120: {
+      slidesPerView: 6,
+    },
+    930: {
+      slidesPerView: 5,
+    },
+    840: {
+      slidesPerView: 4.5,
+    },
+    760: {
+      slidesPerView: 4,
+    },
+    630: {
+      slidesPerView: 3.5,
+    },
+    560: {
+      slidesPerView: 3,
+    },
+    400: {
+      slidesPerView: 2.5,
+    },
+    320: {
+      slidesPerView: 1.5,
+    },
   },
   autoplay: {
     delay: 1,
@@ -256,4 +173,168 @@ const swiperBrands = new Swiper(".marquee", {
   },
 });
 
-document.querySelector("head").append(styleEl);
+document.querySelector('head').append(styleEl);
+
+const swiperBig = new Swiper('#special-offers', {
+  // configure Swiper to use modules
+  modules: [Navigation],
+  loop: true,
+  navigation: {
+    nextEl: '.simular-next',
+    prevEl: '.simular-prev',
+  },
+  slidesPerView: 3,
+
+  breakpoints: {
+    1350: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    890: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      centeredSlides: true,
+      loop: true,
+    },
+    660: {
+      slidesPerView: 2,
+      // centeredSlides: true,
+      spaceBetween: 40,
+    },
+    320: {
+      slidesPerView: 1,
+    },
+  },
+});
+
+const likes = document.querySelectorAll('.swiper-mini-like');
+
+likes.forEach((like) => {
+  like.addEventListener('click', () => {
+    like.classList.toggle('active');
+  });
+});
+
+const swipercars = new Swiper('#car-slider', {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination],
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  loop: true,
+  nested: true,
+});
+
+// const logoBlocks = document.querySelectorAll('.logo-block');
+// // const tiket1 = document.querySelector('.brands-1');
+// // const tiket2 = document.querySelector('.brands-2');
+
+// logoBlocks.forEach((block) => {
+//   block.addEventListener('mouseover', () => {
+//     tiket1.style.animationPlayState = 'paused';
+//     // tiket2.style.animationPlayState = 'paused';
+//   });
+
+//   block.addEventListener('mouseout', () => {
+//     tiket1.style.animationPlayState = 'running';
+//     // tiket2.style.animationPlayState = 'running';
+//   });
+// });
+document.addEventListener('DOMContentLoaded', () => {
+  const locations = document.querySelectorAll('.company__locations-items .location');
+  const showMoreBtn = document.querySelector('.show-more');
+  const container = document.querySelector('.company__locations-items');
+
+  // Показываем только первые 3 элемента
+  locations.forEach((location, index) => {
+    if (index > 2) {
+      location.classList.remove('show');
+    } else {
+      location.classList.add('show');
+    }
+  });
+
+  container.style.maxHeight = '40px'; // Ограничиваем высоту до трех элементов
+  showMoreBtn.textContent = 'Показать больше';
+  showMoreBtn.classList.remove('hide');
+
+  // Обработчик клика на кнопку
+  showMoreBtn.addEventListener('click', () => {
+    if (showMoreBtn.textContent === 'Показать больше') {
+      // Сначала изменяем высоту контейнера
+      container.style.maxHeight = `${container.scrollHeight}px`;
+
+      // Запускаем анимацию для показа всех элементов
+      setTimeout(() => {
+        locations.forEach((location) => {
+          location.classList.add('show');
+        });
+      }, 100); // Задержка должна совпадать с длительностью перехода max-height
+
+      // Меняем текст кнопки на "Скрыть"
+      showMoreBtn.textContent = 'Скрыть';
+      showMoreBtn.classList.add('hide');
+    } else {
+      // Сначала убираем все элементы, кроме первых трех
+      locations.forEach((location, index) => {
+        if (index > 2) {
+          location.classList.remove('show');
+        }
+      });
+
+      // Меняем текст кнопки на "Показать больше"
+      showMoreBtn.textContent = 'Показать больше';
+      showMoreBtn.classList.remove('hide');
+
+      container.style.maxHeight = '40px';
+    }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const pluses = document.querySelectorAll('.pluses__block');
+  const showMoreBtn = document.getElementById('show-more');
+  const container = document.querySelector('.pluses');
+
+  // Показываем только первые 3 элемента
+  pluses.forEach((plus, index) => {
+    if (index > 2) {
+      plus.classList.remove('show');
+    } else {
+      plus.classList.add('show');
+    }
+  });
+
+  // Ограничиваем высоту контейнера до трех элементов
+  container.style.maxHeight = '45px'; // Задайте нужную высоту
+
+  // Обработчик клика на кнопку
+  showMoreBtn.addEventListener('click', () => {
+    if (showMoreBtn.textContent === 'Показать все') {
+      // Сначала изменяем высоту контейнера
+      container.style.maxHeight = `${container.scrollHeight}px`;
+
+      // Запускаем анимацию для показа всех элементов
+      pluses.forEach((plus) => {
+        plus.classList.add('show');
+      });
+
+      // Меняем текст кнопки на "Скрыть"
+      showMoreBtn.textContent = 'Скрыть';
+    } else {
+      // Сначала убираем все элементы, кроме первых трех
+      pluses.forEach((plus, index) => {
+        if (index > 2) {
+          plus.classList.remove('show');
+        }
+      });
+
+      // Меняем текст кнопки на "Показать все"
+      showMoreBtn.textContent = 'Показать все';
+
+      // Сбрасываем высоту контейнера
+      container.style.maxHeight = '45px';
+    }
+  });
+});

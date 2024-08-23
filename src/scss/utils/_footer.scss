@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 .footer {
   background-color: $darkgray;
@@ -147,7 +147,7 @@
     }
 
     .map-bg {
-      background: url(../../../temple/images/footer/map.png) center no-repeat;
+      background: url(/public/temple/images/footer/map.png) center no-repeat;
       padding: 26px;
       border-radius: 8px;
       @media (max-width: 890px) {

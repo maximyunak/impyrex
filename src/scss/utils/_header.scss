@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 header {
   background-color: #242423;
@@ -387,12 +387,12 @@ header {
     align-items: center;
     gap: 15px;
     margin-top: -2px;
+    position: relative;
 
     a {
       color: #fff;
     }
 
-    position: relative;
     img {
       cursor: pointer;
     }

@@ -2,9 +2,9 @@
 
 .banner {
   margin-top: 60px;
-  background: url(../../../temple/images/license/bg.png) no-repeat;
+  background: url(/public/temple/images/license/bg.png) no-repeat;
   background-position-x: right;
-  height: 486px;
+  min-height: 486px;
 
   @media (max-width: 1000px) {
     background-position-x: 150px;
@@ -41,6 +41,7 @@
     font-weight: 550;
     line-height: 19.76px;
     text-align: center;
+    margin-bottom: 1px;
     @media (max-width: 750px) {
       margin-top: 20px;
     }
@@ -75,6 +76,4 @@
       line-height: 18px;
     }
   }
-}
-.orange-hover {
 }

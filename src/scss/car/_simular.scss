@@ -1,20 +1,20 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .simular {
   margin-top: 30px;
   // overflow: hidden;
 
-  .swiper-simular {
-    margin-top: 15px;
-    // width: 100% !important;
-    overflow: hidden;
-    // width: 90%;
-    margin: 15px auto 0;
+  // .swiper-simular {
+  //   margin-top: 15px;
+  //   // width: 100% !important;
+  //   overflow: hidden;
+  //   // width: 90%;
+  //   margin: 15px auto 0;
 
-    @media (min-width: 1650px) {
-      width: 92%;
-    }
-  }
+  //   @media (min-width: 1650px) {
+  //     // width: 92%;
+  //   }
+  // }
 
   &__container {
     position: relative;
@@ -35,222 +35,786 @@
     justify-content: center;
     cursor: pointer;
 
-    @media (max-width: 1650px) {
-      display: none;
+    @media (max-width: 1400px) {
+      // display: none;
     }
   }
 
   .simular-prev {
-    left: 0px;
+    left: 10px;
+    @media (max-width: 1400px) {
+      left: 18px;
+    }
   }
 
   .simular-next {
-    right: 0px;
+    right: 10px;
+    @media (max-width: 1400px) {
+      right: 18px;
+    }
   }
 
-  &__slide {
+  // &__slide {
+  //   cursor: pointer;
+  //   border: 1px solid #e4ddd5;
+  //   width: 358px;
+  //   border-radius: 8px;
+  //   // height: 376px;
+
+  //   @media (min-width: 1350px) {
+  //     width: auto;
+  //   }
+  //   @media (max-width: 1150px) {
+  //     // width: auto;
+  //     width: 100%;
+  //     height: auto !important;
+  //   }
+  //   @media (max-width: 540px) {
+  //     width: 80%;
+  //     margin: 0 auto;
+  //   }
+  //   @media (max-width: 480px) {
+  //     width: 100%;
+  //   }
+
+  //   &-img {
+  //     position: relative;
+  //   }
+
+  //   .company__logo {
+  //     position: absolute;
+  //     bottom: 14px;
+  //     left: 14px;
+
+  //     img {
+  //       width: 70px;
+  //       border-radius: 8px;
+  //       @media (max-width: 500px) {
+  //         width: 50px;
+  //       }
+  //     }
+  //   }
+  //   .car-img {
+  //     width: 358px;
+  //     height: 140px;
+  //     object-fit: cover;
+  //     border-radius: 8px 8px 0 0;
+  //     @media (max-width: 1150px) {
+  //       width: 100%;
+  //       height: 200px;
+  //     }
+  //     @media (max-width: 770px) {
+  //       height: auto;
+  //     }
+  //   }
+  //   .car-text {
+  //     padding: 10px;
+
+  //     gap: 10px;
+  //     display: flex;
+  //     justify-content: space-between;
+  //     flex-direction: column;
+
+  //     @media (max-width: 770px) {
+  //       // height: auto !important;
+  //     }
+  //     .car__brand {
+  //       font-size: 18px;
+  //       font-weight: 500;
+  //       word-wrap: break-word;
+  //     }
+  //     .car__info {
+  //       background-color: $darkgray;
+  //       border-radius: 8px;
+  //       padding: 20px;
+  //     }
+
+  //     .car__price {
+  //       display: flex;
+  //       justify-content: space-between;
+
+  //       h4 {
+  //         font-size: 14px;
+  //         font-weight: 400;
+  //         color: #9d948a;
+  //       }
+  //       h1 {
+  //         font-size: 20px;
+  //         font-weight: 500;
+  //         margin-top: 12px;
+  //       }
+  //       h2 {
+  //         font-size: 16px;
+  //         font-weight: 400;
+  //         margin-top: 12px;
+  //       }
+  //     }
+
+  //     .social {
+  //       display: flex;
+  //       gap: 10px;
+  //       justify-content: space-between;
+  //       @media (max-width: 1150px) {
+  //         width: 100%;
+  //       }
+  //     }
+
+  //     .contacts {
+  //       margin-top: 20px;
+  //       display: flex;
+  //       justify-content: space-between;
+  //       gap: 10px;
+  //       @media (max-width: 400px) {
+  //         .phone,
+  //         .whatsapp,
+  //         .reservation {
+  //           width: 100% !important;
+  //         }
+  //       }
+
+  //       @media (max-width: 770px) {
+  //         flex-direction: column;
+  //       }
+
+  //       .phone {
+  //         background-color: #5291f0;
+  //         // padding: 16px 16px;
+  //         // width: 100%;
+  //         width: 45px !important;
+  //         height: 45px !important;
+  //         display: flex;
+  //         align-items: center;
+  //         justify-content: center;
+  //         border-radius: 8px;
+  //         img {
+  //           width: 25px;
+  //           height: 25px;
+  //           // height: 32px;
+  //           border-radius: 0 !important;
+  //         }
+  //         @media (max-width: 1650px) {
+  //           height: 50px;
+  //           width: 50px;
+  //         }
+  //         @media (max-width: 1150px) {
+  //           width: 100% !important;
+  //         }
+  //       }
+
+  //       .whatsapp {
+  //         background-color: #12a108;
+  //         padding: 16px 0;
+  //         height: 45px;
+  //         width: 45px;
+  //         display: flex;
+  //         align-items: center;
+  //         justify-content: center;
+  //         border-radius: 8px;
+  //         img {
+  //           width: 25px;
+  //           border-radius: 0 !important;
+  //           height: 25px;
+  //         }
+  //         @media (max-width: 1650px) {
+  //           height: 50px;
+  //           width: 50px;
+  //         }
+  //         @media (max-width: 1150px) {
+  //           width: 100%;
+  //         }
+  //       }
+
+  //       .reservation {
+  //         background-color: $acent;
+  //         // width: 100%;
+  //         padding: 0 10px;
+  //         height: 45px;
+  //         border-radius: 8px;
+  //         @media (max-width: 1650px) {
+  //           height: 50px;
+  //           // width: 50px;
+  //           padding: 0 18px;
+  //         }
+  //         @media (max-width: 450px) {
+  //           width: 100%;
+  //         }
+  //         @media (max-width: 370px) {
+  //           font-size: 14px;
+  //         }
+  //       }
+  //       @media (max-width: 430px) {
+  //         .phone {
+  //           padding: 10px 0;
+  //           height: 40px;
+  //         }
+  //         .whatsapp {
+  //           padding: 10px 0;
+  //           height: 40px;
+  //         }
+  //         .reservation {
+  //           height: 40px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+// .company__tag {
+//   display: flex;
+//   gap: 7px;
+//   align-items: center;
+//   background-color: $darkgray;
+//   padding: 8px 10px;
+//   font-size: 14px;
+//   font-weight: 400;
+//   border-radius: 8px;
+
+//   @media (max-width: 370px) {
+//     font-size: 10px;
+//     img {
+//       width: 15px !important;
+//     }
+//   }
+
+//   img {
+//     width: 19px;
+//   }
+// }
+
+// .company__tags {
+//   position: absolute;
+//   z-index: 9999;
+//   left: 14px;
+//   top: 14px;
+//   display: flex;
+//   gap: 10px;
+//   flex-wrap: wrap;
+//   justify-content: start;
+// }
+
+// .second__tag {
+//   @media (max-width: 660px) {
+//     display: none;
+//   }
+// }
+
+:root {
+  --swiper-theme-color: #0000007d !important;
+}
+
+.swiper-mini {
+  position: relative;
+  margin-left: 0 !important;
+
+  .slider-slide .slider-img {
+    z-index: 99;
+    object-fit: fill;
+    height: 238px;
+    border-radius: 16px 16px 0 0;
+
+    @media (max-width: 450px) {
+      height: auto;
+    }
+  }
+
+  &:hover {
+    .nav-btn-mini {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .nav-btn-mini {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
     cursor: pointer;
-    border: 1px solid #e4ddd5;
-    width: 358px;
-    border-radius: 8px;
-    // height: 376px;
+    color: red;
+    transform: translateY(50%, -50%);
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    img {
+      height: 30px;
+    }
+  }
 
-    @media (min-width: 1350px) {
-      width: auto;
-    }
-    @media (max-width: 1150px) {
-      // width: auto;
-      width: 100%;
-      height: auto !important;
-    }
-    @media (max-width: 540px) {
-      width: 80%;
-      margin: 0 auto;
-    }
-    @media (max-width: 480px) {
-      width: 100%;
-    }
+  .next {
+    right: 10px;
+  }
+}
 
-    &-img {
-      position: relative;
+.sliders {
+  display: flex;
+  justify-content: center;
+}
+.swiper-big {
+  overflow: hidden;
+
+  .slider-slide {
+    height: 766px;
+    margin: 6px 0;
+    &:hover {
+      box-shadow: 0 1px 10px #f0ac525e;
     }
+  }
 
-    .company__logo {
-      position: absolute;
-      bottom: 14px;
-      left: 14px;
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+}
 
+.slider-mini-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.swiper-mini-detals {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 450px) {
+    .detal-block {
+      gap: 8px !important;
+    }
+    h5 {
+      font-size: 12px !important;
+    }
+    h3 {
+      font-size: 13px !important;
+    }
+  }
+
+  .detal-block {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    margin-bottom: 14px;
+    img {
+      // display: none;
+    }
+    @media (max-width: 890px) {
       img {
-        width: 70px;
-        border-radius: 8px;
-        @media (max-width: 500px) {
-          width: 50px;
-        }
+        display: none;
       }
     }
-    .car-img {
-      width: 358px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 8px 8px 0 0;
-      @media (max-width: 1150px) {
-        width: 100%;
-        height: 200px;
-      }
-      @media (max-width: 770px) {
-        height: auto;
+    @media (max-width: 660px) {
+      img {
+        display: block;
       }
     }
-    .car-text {
-      padding: 10px;
+    &:nth-child(1) {
+      img {
+        margin-left: 5px;
+      }
+    }
 
-      gap: 10px;
+    h5 {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-top: 2px;
+    }
+  }
+}
+
+.slider-slide {
+  width: 426px;
+  cursor: pointer;
+  border-radius: 16px;
+  transition: 0.3s;
+  position: relative;
+  background-color: $darkgray;
+
+  @media (max-width: 890px) {
+    // width: 400px;
+    width: clamp(20rem, 10.294rem + 23.53vw, 25rem);
+  }
+  @media (max-width: 825px) {
+    // width: 350px;
+    height: 725px !important;
+  }
+  @media (max-width: 720px) {
+    // width: 300px;
+    height: 700px !important;
+  }
+  @media (max-width: 660px) {
+    width: 400px;
+    height: auto !important;
+  }
+
+  @media (max-width: 475px) {
+    width: 90vw;
+  }
+
+  img {
+    border-radius: 16px 16px 0 0;
+  }
+
+  .swiper-mini-logo {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      cursor: pointer;
+      width: 72px;
+      border: 1px solid #fffbd5;
+      border-radius: 8px;
+      @media (max-width: 500px) {
+        width: 50px;
+      }
+    }
+    h1 {
+      font-size: 18px;
+      font-weight: 500;
+      cursor: pointer;
+      // color: #1e2329;
+      @media (max-width: 500px) {
+        font-size: 15px;
+      }
+    }
+    h3 {
+      margin-top: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 400;
+      // color: #1e2329;
+      @media (max-width: 500px) {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+.swiper-pagination-bullet-active {
+  box-shadow: 0 0 5px white;
+}
+
+.swiper-mini-price {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-color: $darkgray;
+  border-radius: 8px;
+  align-items: center;
+  padding: 15px 0;
+
+  @media (max-width: 326px) {
+    // flex-direction: column;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  h5 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.radius {
+  border-radius: 8px;
+}
+
+.swiper-mini-contacts {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 445px) {
+    .phone,
+    .whatsapp {
+      width: 60px !important;
+    }
+  }
+  @media (max-width: 825px) {
+    margin-bottom: 7px;
+
+    gap: 10px;
+    .phone,
+    .whatsapp {
+      width: 100% !important;
+    }
+  }
+  @media (max-width: 370px) {
+    .phone,
+    .whatsapp {
+      width: 55px !important;
+    }
+  }
+
+  .phone {
+    background-color: #5291f0;
+    padding: 16px 0;
+    width: 83px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .whatsapp {
+    background-color: #12a108;
+    padding: 16px 0;
+    width: 83px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .reservation {
+    background-color: $acent;
+    padding: 16px;
+    width: 167px;
+    height: 50px;
+    border-radius: 8px;
+    @media (max-width: 445px) {
+      width: 140px;
+    }
+    @media (max-width: 370px) {
+      font-size: 14px;
+      width: 120px;
+    }
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.swiper-mini-info {
+  padding: 25px;
+  height: 526px;
+  display: flex;
+  flex-direction: column;
+
+  .flex-end {
+    margin-top: auto;
+  }
+
+  @media (max-width: 890px) {
+    padding: 15px;
+  }
+
+  // position: relative;
+}
+
+.swiper-mini-verify {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  background-color: $darkgray;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+
+  @media (max-width: 370px) {
+    font-size: 10px;
+    img {
+      width: 15px !important;
+    }
+  }
+
+  z-index: 9999;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  img {
+    width: 19px;
+  }
+}
+
+.swiper-mini-premium {
+  margin-left: 34%;
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  background-color: $darkgray;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+
+  @media (max-width: 370px) {
+    font-size: 10px;
+    img {
+      width: 15px !important;
+    }
+  }
+
+  z-index: 9999;
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  img {
+    width: 19px;
+  }
+}
+
+.swiper-mini-like {
+  display: inline;
+  background-color: $darkgray;
+  padding: 5px;
+  border-radius: 4px !important;
+
+  img {
+    border-radius: 0 !important;
+  }
+
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 9999;
+
+  .like-active {
+    opacity: 0;
+    // visibility: hidden;
+    position: absolute;
+    transition: 0.3s;
+    top: 5px;
+    left: 5px;
+    transition: 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &.active {
+    .like {
+      display: none;
+    }
+    .like-active {
+      opacity: 1;
+      // visibility: hidden;
+      position: static;
+    }
+  }
+}
+
+.product__slider-title {
+  margin-top: 73px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    &-btns {
       display: flex;
-      justify-content: space-between;
-      flex-direction: column;
+      gap: 10px;
+    }
+  }
 
-      @media (max-width: 770px) {
-        // height: auto !important;
-      }
-      .car__brand {
-        font-size: 18px;
-        font-weight: 500;
-        word-wrap: break-word;
-      }
-      .car__info {
-        background-color: $darkgray;
-        border-radius: 8px;
-        padding: 20px;
-      }
+  h1 {
+    font-size: 24px;
+    letter-spacing: 0.7px;
+    font-weight: 700;
+    @media (max-width: 480px) {
+      font-size: 17px;
+    }
+  }
 
-      .car__price {
-        display: flex;
-        justify-content: space-between;
-
-        h4 {
-          font-size: 14px;
-          font-weight: 400;
-          color: #9d948a;
-        }
-        h1 {
-          font-size: 20px;
-          font-weight: 500;
-          margin-top: 12px;
-        }
-        h2 {
-          font-size: 16px;
-          font-weight: 400;
-          margin-top: 12px;
-        }
-      }
-
-      .social {
-        display: flex;
-        gap: 10px;
-        justify-content: space-between;
-        @media (max-width: 1150px) {
-          width: 100%;
-        }
-      }
-
-      .contacts {
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        @media (max-width: 400px) {
-          .phone,
-          .whatsapp,
-          .reservation {
-            width: 100% !important;
-          }
-        }
-
-        @media (max-width: 770px) {
-          flex-direction: column;
-        }
-
-        .phone {
-          background-color: #5291f0;
-          // padding: 16px 16px;
-          // width: 100%;
-          width: 45px !important;
-          height: 45px !important;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 8px;
-          img {
-            width: 25px;
-            height: 25px;
-            // height: 32px;
-            border-radius: 0 !important;
-          }
-          @media (max-width: 1650px) {
-            height: 50px;
-            width: 50px;
-          }
-          @media (max-width: 1150px) {
-            width: 100% !important;
-          }
-        }
-
-        .whatsapp {
-          background-color: #12a108;
-          padding: 16px 0;
-          height: 45px;
-          width: 45px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 8px;
-          img {
-            width: 25px;
-            border-radius: 0 !important;
-            height: 25px;
-          }
-          @media (max-width: 1650px) {
-            height: 50px;
-            width: 50px;
-          }
-          @media (max-width: 1150px) {
-            width: 100%;
-          }
-        }
-
-        .reservation {
-          background-color: $acent;
-          // width: 100%;
-          padding: 0 10px;
-          height: 45px;
-          border-radius: 8px;
-          @media (max-width: 1650px) {
-            height: 50px;
-            // width: 50px;
-            padding: 0 18px;
-          }
-          @media (max-width: 450px) {
-            width: 100%;
-          }
-          @media (max-width: 370px) {
-            font-size: 14px;
-          }
-        }
-        @media (max-width: 430px) {
-          .phone {
-            padding: 10px 0;
-            height: 40px;
-          }
-          .whatsapp {
-            padding: 10px 0;
-            height: 40px;
-          }
-          .reservation {
-            height: 40px;
-          }
-        }
+  button {
+    img {
+      padding: 5px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+  }
+  @media (max-width: 670px) {
+    h1 {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 585px) {
+    .show-more-btn {
+      padding: 8px 12px;
+    }
+    button {
+      img {
+        padding: 3px;
+        margin-right: 0px;
       }
     }
+    h1 {
+      width: 150px;
+    }
+  }
+  @media (max-width: 450px) {
+    h1 {
+      width: 90px;
+      font-size: 14px;
+    }
+    .show-more-btn {
+      padding: 6px 10px;
+    }
+  }
+}
+
+.show-more-btn {
+  color: $acent;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid $acent;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 550;
+  @media (max-width: 390px) {
+    padding: 8px 12px;
+  }
+  @media (max-width: 375px) {
+    padding: 0 !important;
+    border: 0;
+    font-size: 12px;
   }
 }
 
@@ -288,7 +852,7 @@
 }
 
 .second__tag {
-  @media (max-width: 660px) {
+  @media (max-width: 820px) {
     display: none;
   }
 }

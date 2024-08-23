@@ -1,0 +1,114 @@
+// @import "../utils/variables.scss";
+@import "/src/scss/utils/variables.scss";
+
+.faq {
+  margin-top: 63px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  &__selects {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__select {
+    // background-color: $darkgray;
+    // display: flex;
+    // justify-content: space-between;
+    // padding: 20px 31px 25px 31px;
+    // border-radius: 10px;
+    // transition: 0.3s;
+    // height: auto;
+    // cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    // justify-content: space-between;
+    // padding: 20px 31px 25px 31px;
+    // border-radius: 10px;
+    transition: 0.3s;
+    // @media (max-width: 374px) {
+    //   padding: 23px 23px;
+    // }
+
+    img {
+      transition: 0.3s;
+      @media (max-width: 460px) {
+        width: 15px;
+      }
+      @media (max-width: 374px) {
+        width: 10px;
+      }
+    }
+
+    .info {
+      background-color: $darkgray;
+      padding: 20px 31px 19px 31px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.4s;
+
+      &:hover {
+        background-color: $acent;
+      }
+
+      @media (max-width: 600px) {
+        padding: 15px 10px;
+      }
+
+      @media (max-width: 397px) {
+        padding: 10px 15px;
+      }
+
+      &__answer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      p {
+        margin-top: 15px;
+        // padding-bottom: 15px;
+        display: none;
+
+        max-width: 90%;
+
+        font-size: 18px;
+        font-weight: 550;
+        line-height: 21.8px;
+        overflow: hidden;
+        letter-spacing: 0.3px;
+        @media (max-width: 600px) {
+          font-size: 15px;
+          margin-top: 7px;
+        }
+        @media (max-width: 374px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &.active {
+      img {
+        transform: rotate(180deg);
+      }
+      .info {
+        // p {
+        //   display: block;
+        // }
+      }
+    }
+  }
+}

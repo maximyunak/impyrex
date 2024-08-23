@@ -1,4 +1,4 @@
-@import '../utils/variables.scss';
+@import "../utils/variables.scss";
 
 .type {
   margin-top: 40px;
@@ -46,6 +46,7 @@
     @media (max-width: 800px) {
       flex-wrap: nowrap;
       overflow-x: scroll;
+      justify-content: start;
     }
   }
 
