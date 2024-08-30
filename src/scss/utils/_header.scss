@@ -109,6 +109,7 @@ header {
       &.with-modal {
         position: relative;
         display: block;
+        margin-top: 2px;
 
         @media (max-width: 1260px) {
           display: none !important;
@@ -276,6 +277,7 @@ header {
 
     .money-dropdown {
       margin-top: 10px;
+      overflow: hidden;
       .money-visible {
         display: flex;
         gap: 10px;
@@ -405,7 +407,7 @@ header {
     visibility: hidden;
     left: -46px;
     width: 276px;
-    height: 294px;
+    // height: 294px;
     background-color: $lightgray;
     padding: 20px;
     display: flex;
@@ -420,15 +422,35 @@ header {
       visibility: visible;
     }
 
-    .modal__row {
+    .modal__title {
       display: grid;
 
-      // grid-template-columns: 112px, 74px;
       grid-template-columns: 142px 1fr;
-
-      &:nth-child(1) {
-        margin-bottom: -8px;
+      gap: 20px;
+      h1 {
+        font-size: 14px;
+        font-weight: 400;
       }
+      h2 {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    .modal__items {
+      display: grid;
+      grid-template-columns: 142px 1fr;
+      gap: 20px;
+    }
+
+    .modal__money {
+    }
+
+    .modal__language,
+    .modal__money {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
 
       h1 {
         font-size: 14px;
@@ -439,8 +461,6 @@ header {
         font-size: 14px;
         font-weight: 400;
       }
-
-      gap: 20px;
 
       a {
         padding: 13px 0 13px 10px;
@@ -454,6 +474,7 @@ header {
         gap: 10px;
         cursor: pointer;
         transition: 0.3s;
+        max-width: 142px;
 
         &.active {
           background-color: $acent;

@@ -1,5 +1,4 @@
-@import "../utils/variables.scss";
-
+@import "/src/scss/utils/variables.scss";
 :root {
   --swiper-theme-color: #0000007d !important;
 }
@@ -59,7 +58,7 @@
   overflow: hidden;
 
   .slider-slide {
-    height: 766px;
+    // height: 766px;
     margin: 6px 0;
     &:hover {
       box-shadow: 0 1px 10px #f0ac525e;
@@ -204,11 +203,6 @@
   box-shadow: 0 0 5px white;
 }
 
-.swiper-pagination {
-  z-index: 99999999999;
-  height: 10px !important;
-}
-
 .swiper-mini-price {
   margin-top: 20px;
   display: flex;
@@ -331,7 +325,7 @@
 
 .swiper-mini-info {
   padding: 25px;
-  height: 526px;
+  // height: 526px;
   display: flex;
   flex-direction: column;
 
