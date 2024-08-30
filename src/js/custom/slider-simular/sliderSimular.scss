@@ -112,11 +112,6 @@
         display: block;
       }
     }
-    &:nth-child(1) {
-      img {
-        margin-left: 5px;
-      }
-    }
 
     h5 {
       font-size: 14px;
@@ -555,4 +550,11 @@
   @media (max-width: 820px) {
     display: none;
   }
+}
+
+.img__width {
+  width: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

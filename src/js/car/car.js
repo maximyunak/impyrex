@@ -139,56 +139,6 @@ const swiperBrands = new Swiper(".marquee", {
 });
 
 document.querySelector("head").append(styleEl);
-// const swipercars = new Swiper("#car-slider", {
-//   // configure Swiper to use modules
-//   modules: [Navigation, Pagination],
-
-//   pagination: {
-//     el: ".swiper-pagination",
-//   },
-//   loop: true,
-//   nested: true,
-// });
-
-// const swiperBig = new Swiper("#special-offers", {
-//   // configure Swiper to use modules
-//   modules: [Navigation],
-//   loop: true,
-//   navigation: {
-//     nextEl: ".simular-next",
-//     prevEl: ".simular-prev",
-//   },
-//   slidesPerView: 3,
-
-//   breakpoints: {
-//     1350: {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//     },
-//     890: {
-//       slidesPerView: 2,
-//       spaceBetween: 20,
-//       centeredSlides: true,
-//       loop: true,
-//     },
-//     660: {
-//       slidesPerView: 2,
-//       // centeredSlides: true,
-//       spaceBetween: 40,
-//     },
-//     320: {
-//       slidesPerView: 1,
-//     },
-//   },
-// });
-
-// const likes = document.querySelectorAll(".swiper-mini-like");
-
-// likes.forEach((like) => {
-//   like.addEventListener("click", () => {
-//     like.classList.toggle("active");
-//   });
-// });
 
 var swiper = new Swiper(".thumb-swiper", {
   spaceBetween: 10,
@@ -286,13 +236,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
 document.addEventListener("DOMContentLoaded", () => {
   const pluses = document.querySelectorAll(".pluses__block");
   const showMoreBtn = document.getElementById("show-more");
   const container = document.querySelector(".pluses");
 
-  // Показываем только первые 3 элемента
+  // Изначально показываем только первые 3 элемента
   pluses.forEach((plus, index) => {
     if (index > 2) {
       plus.classList.remove("show");
@@ -302,34 +251,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Ограничиваем высоту контейнера до трех элементов
-  container.style.maxHeight = "45px"; // Задайте нужную высоту
+  container.style.maxHeight = "45px"; // Эта высота должна соответствовать высоте трех элементов
 
-  // Обработчик клика на кнопку
+  // Обработчик клика на кнопку "Показать все"
   showMoreBtn.addEventListener("click", () => {
-    if (showMoreBtn.textContent === "Показать все") {
-      // Сначала изменяем высоту контейнера
-      container.style.maxHeight = `${container.scrollHeight}px`;
+    const isExpanded = showMoreBtn.textContent.trim() === "Скрыть";
 
-      // Запускаем анимацию для показа всех элементов
-      pluses.forEach((plus) => {
-        plus.classList.add("show");
-      });
-
-      // Меняем текст кнопки на "Скрыть"
-      showMoreBtn.textContent = "Скрыть";
-    } else {
-      // Сначала убираем все элементы, кроме первых трех
+    if (isExpanded) {
+      // Скрываем все элементы, кроме первых трех
       pluses.forEach((plus, index) => {
         if (index > 2) {
           plus.classList.remove("show");
         }
       });
 
-      // Меняем текст кнопки на "Показать все"
-      showMoreBtn.textContent = "Показать все";
-
-      // Сбрасываем высоту контейнера
+      // Устанавливаем ограничение высоты контейнера
       container.style.maxHeight = "45px";
+
+      // Меняем текст кнопки обратно на "Показать все"
+      showMoreBtn.textContent = "Показать все";
+    } else {
+      // Показываем все элементы
+      pluses.forEach((plus) => {
+        plus.classList.add("show");
+      });
+
+      // Убираем ограничение высоты контейнера
+      container.style.maxHeight = `${container.scrollHeight}px`;
+
+      // Меняем текст кнопки на "Скрыть"
+      showMoreBtn.textContent = "Скрыть";
     }
   });
 });
