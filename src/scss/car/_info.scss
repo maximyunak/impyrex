@@ -1,4 +1,4 @@
-@import "../utils/variables.scss";
+@import '../utils/variables.scss';
 
 .info {
   margin-top: 97px;
@@ -313,12 +313,18 @@
         font-weight: 550;
         letter-spacing: 0.4px;
       }
-      div {
+      .car__types {
+        display: flex;
+        gap: 5px 20px;
+        flex-wrap: wrap;
+      }
+      .car__type {
         margin-top: 13px;
         display: flex;
         gap: 10px;
         h3 {
           margin-top: 6px;
+          text-wrap: nowrap;
         }
       }
     }
@@ -828,7 +834,7 @@
     }
 
     .image-cover {
-      content: "";
+      content: '';
       opacity: 0.4;
       position: absolute;
       left: -10px;
