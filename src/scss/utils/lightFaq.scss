@@ -1,6 +1,7 @@
 @import "./variables.scss";
 
-.faq {
+.faq,
+.flags {
   .info {
     background: #fff !important;
     border: 1px solid #e4ddd5;
@@ -21,8 +22,8 @@
     &:hover {
       background-color: $acent !important;
     }
-  }
-  img {
-    filter: invert(1);
+    .trigger {
+      filter: invert(1);
+    }
   }
 }

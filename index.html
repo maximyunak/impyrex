@@ -301,54 +301,45 @@
           </svg>
 
           <div class="login__modal">
-            <div class="modal__row">
+            <div class="modal__title">
               <h1>Язык</h1>
               <h2>Валюта</h2>
             </div>
-            <div class="modal__row">
-              <a href="" class="language active">
-                <img
-                  src="./temple/images/header/russian-federation.svg"
-                  alt=""
-                />Русский
-              </a>
-              <a href="" class="money active"
-                ><img src="./temple/images/header/ruble.svg" alt="" />RUB</a
-              >
-            </div>
-            <div class="modal__row">
-              <a href="" class="language">
-                <img
-                  src="./temple/images/header/russian-federation.svg"
-                  alt=""
-                />Английский
-              </a>
-              <a href="" class="money"
-                ><img src="./temple/images/header/dollar.svg" alt="" />USD</a
-              >
-            </div>
-
-            <div class="modal__row">
-              <a href="" class="language">
-                <img
-                  src="./temple/images/header/russian-federation.svg"
-                  alt=""
-                />Немецкий
-              </a>
-              <a href="" class="aed money"
+            <div class="modal__items">
+              <div class="modal__language">
+                <a href="" class="language active">
+                  <img
+                    src="./temple/images/header/russian-federation.svg"
+                    alt=""
+                  />Русский
+                </a>
+                <a href="" class="language">
+                  <img
+                    src="./temple/images/header/russian-federation.svg"
+                    alt=""
+                  />Английский
+                </a>
+                <a href="" class="language">
+                  <img
+                    src="./temple/images/header/russian-federation.svg"
+                    alt=""
+                  />Немецкий
+                </a>
+              </div>
+              <div class="modal__money">
+                <a href="" class="aed money"
                 ><img src="./temple/images/header/aed.svg" alt="" />AED</a
               >
-            </div>
-            <div class="modal__row">
-              <a href="" class="language">
-                <img
-                  src="./temple/images/header/russian-federation.svg"
-                  alt=""
-                />Испанский
-              </a>
               <a href="" class="money"
-                ><img src="./temple/images/header/euro.svg" alt="" />EUR</a
-              >
+              ><img src="./temple/images/header/euro.svg" alt="" />EUR</a
+            >
+            <a href="" class="money"
+            ><img src="./temple/images/header/euro.svg" alt="" />EUR</a
+          >
+          <a href="" class="money"
+          ><img src="./temple/images/header/euro.svg" alt="" />EUR</a
+        >
+              </div>
             </div>
           </div>
         </div>
@@ -399,7 +390,7 @@
           <input type="text" placeholder="Название автомобиля" />
           <button class="orange-hover">
             <img
-              src="./temple/images/landing/banner/Mask groupsearch.svg"
+              src="./temple/images/landing/banner/search.svg"
               alt=""
             /> <span>Поиск</span>
           </button>
@@ -507,13 +498,13 @@
             <div class="nav">
               <h1>Специальные предложения</h1>
               <div class="nav-btns">
-                <button class="btn-prev-big line-hover">
+                <button class="btn-prev-big line-hover simular-prev">
                   <img
                     src="./temple/images/forapp/navigation/iconizer-navigate-before.svg"
                     alt=""
                   />
                 </button>
-                <button class="btn-next-big line-hover">
+                <button class="btn-next-big line-hover simular-next">
                   <img
                     src="./temple/images/forapp/navigation/iconizer-navigate-next.svg"
                     alt=""
@@ -606,7 +597,22 @@
                     <div class="swiper-mini-detals">
 
                       <div class="detal-block">
-                            <img src="/public/temple/images/landing/car_detals/Mask group-1.svg" alt="">
+                        <div class="img__width">
+                          <img
+                          src="/public/temple/images/landing/car_detals/location.svg"
+                          alt=""
+                        />
+                        </div>
+                        <div>
+                          <h5>Расположение</h5>
+                          <h3>Дубай</h3>
+                        </div>
+                      </div>
+
+                      <div class="detal-block">
+                           <div class="img__width">
+                            <img src="/public/temple/images/landing/car_detals/mest.svg" alt="">
+                           </div>
 
                         <div>
                           <h5>Количество мест</h5>
@@ -614,10 +620,12 @@
                         </div>
                       </div>
                       <div class="detal-block">
-                        <img
+                        <div class="img__width">
+                          <img
                           src="/public/temple/images/landing/car_detals/depozit.svg"
                           alt=""
                         />
+                        </div>
                         <div>
                           <h5>Страховой депозит</h5>
                           <h3>5,000 AED</h3>
@@ -625,7 +633,9 @@
                       </div>
 
                       <div class="detal-block">
-                            <img src="/public/temple/images/landing/car_detals/Mask group-2.svg" alt="">
+                            <div class="img__width">
+                              <img src="/public/temple/images/landing/car_detals/age.svg" alt="">
+                            </div>
 
                         <div>
                           <h5>Возраст</h5>
@@ -634,11 +644,13 @@
                       </div>
 
                       <div class="detal-block">
+                       <div class="img__width">
                         <img
-                          width="22px"
-                          src="/temple/images/car/characteristic/speed.svg"
-                          alt=""
-                        />
+                        width="22px"
+                        src="/temple/images/car/characteristic/speed.svg"
+                        alt=""
+                      />
+                       </div>
                         <div>
                           <h5>Разгон 0-100 км/ч</h5>
                           <h3>4.9 сек</h3>
@@ -731,7 +743,7 @@
                     <div class="swiper-scrollbar"></div>
                   </div>
                   <div class="swiper-mini-info">
-                                      <div class="company__tags">
+                   <div class="company__tags">
                     <div class="company__tag">
                       <img src="./temple/images/icons/verify.svg" alt="" />
                       <h3 class="verify">Проверенный</h3>
@@ -757,28 +769,24 @@
                       Bentley Continental GT Convertible 2022
                     </h2>
                     <div class="swiper-mini-detals">
+
                       <div class="detal-block">
-                        <img
-                          src="/public/temple/images/landing/car_detals/Mask group-1.svg"
+                        <div class="img__width">
+                          <img
+                          src="/public/temple/images/landing/car_detals/location.svg"
                           alt=""
                         />
+                        </div>
                         <div>
                           <h5>Расположение</h5>
                           <h3>Дубай</h3>
                         </div>
                       </div>
+
                       <div class="detal-block">
-                        <img
-                          src="/public/temple/images/landing/car_detals/Mask group-3.svg"
-                          alt=""
-                        />
-                        <div>
-                          <h5>Тип автомобиля</h5>
-                          <h3>Люкс</h3>
-                        </div>
-                      </div>
-                      <div class="detal-block">
-                            <img src="/public/temple/images/landing/car_detals/Mask group-1.svg" alt="">
+                           <div class="img__width">
+                            <img src="/public/temple/images/landing/car_detals/mest.svg" alt="">
+                           </div>
 
                         <div>
                           <h5>Количество мест</h5>
@@ -786,10 +794,12 @@
                         </div>
                       </div>
                       <div class="detal-block">
-                        <img
+                        <div class="img__width">
+                          <img
                           src="/public/temple/images/landing/car_detals/depozit.svg"
                           alt=""
                         />
+                        </div>
                         <div>
                           <h5>Страховой депозит</h5>
                           <h3>5,000 AED</h3>
@@ -797,7 +807,9 @@
                       </div>
 
                       <div class="detal-block">
-                            <img src="/public/temple/images/landing/car_detals/Mask group-2.svg" alt="">
+                            <div class="img__width">
+                              <img src="/public/temple/images/landing/car_detals/age.svg" alt="">
+                            </div>
 
                         <div>
                           <h5>Возраст</h5>
@@ -806,11 +818,13 @@
                       </div>
 
                       <div class="detal-block">
+                       <div class="img__width">
                         <img
-                          width="22px"
-                          src="/temple/images/car/characteristic/speed.svg"
-                          alt=""
-                        />
+                        width="22px"
+                        src="/temple/images/car/characteristic/speed.svg"
+                        alt=""
+                      />
+                       </div>
                         <div>
                           <h5>Разгон 0-100 км/ч</h5>
                           <h3>4.9 сек</h3>
@@ -854,6 +868,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="swiper-slide">
                 <div class="slider-slide">
                   <div class="swiper swiper-mini" id="car-slider">
@@ -903,7 +918,7 @@
                     <div class="swiper-scrollbar"></div>
                   </div>
                   <div class="swiper-mini-info">
-                                      <div class="company__tags">
+                   <div class="company__tags">
                     <div class="company__tag">
                       <img src="./temple/images/icons/verify.svg" alt="" />
                       <h3 class="verify">Проверенный</h3>
@@ -929,28 +944,24 @@
                       Bentley Continental GT Convertible 2022
                     </h2>
                     <div class="swiper-mini-detals">
+
                       <div class="detal-block">
-                        <img
-                          src="/public/temple/images/landing/car_detals/Mask group-1.svg"
+                        <div class="img__width">
+                          <img
+                          src="/public/temple/images/landing/car_detals/location.svg"
                           alt=""
                         />
+                        </div>
                         <div>
                           <h5>Расположение</h5>
                           <h3>Дубай</h3>
                         </div>
                       </div>
+
                       <div class="detal-block">
-                        <img
-                          src="/public/temple/images/landing/car_detals/Mask group-3.svg"
-                          alt=""
-                        />
-                        <div>
-                          <h5>Тип автомобиля</h5>
-                          <h3>Люкс</h3>
-                        </div>
-                      </div>
-                      <div class="detal-block">
-                            <img src="/public/temple/images/landing/car_detals/Mask group-1.svg" alt="">
+                           <div class="img__width">
+                            <img src="/public/temple/images/landing/car_detals/mest.svg" alt="">
+                           </div>
 
                         <div>
                           <h5>Количество мест</h5>
@@ -958,10 +969,12 @@
                         </div>
                       </div>
                       <div class="detal-block">
-                        <img
+                        <div class="img__width">
+                          <img
                           src="/public/temple/images/landing/car_detals/depozit.svg"
                           alt=""
                         />
+                        </div>
                         <div>
                           <h5>Страховой депозит</h5>
                           <h3>5,000 AED</h3>
@@ -969,7 +982,9 @@
                       </div>
 
                       <div class="detal-block">
-                            <img src="/public/temple/images/landing/car_detals/Mask group-2.svg" alt="">
+                            <div class="img__width">
+                              <img src="/public/temple/images/landing/car_detals/age.svg" alt="">
+                            </div>
 
                         <div>
                           <h5>Возраст</h5>
@@ -978,11 +993,13 @@
                       </div>
 
                       <div class="detal-block">
+                       <div class="img__width">
                         <img
-                          width="22px"
-                          src="/temple/images/car/characteristic/speed.svg"
-                          alt=""
-                        />
+                        width="22px"
+                        src="/temple/images/car/characteristic/speed.svg"
+                        alt=""
+                      />
+                       </div>
                         <div>
                           <h5>Разгон 0-100 км/ч</h5>
                           <h3>4.9 сек</h3>
@@ -1026,6 +1043,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="swiper-slide">
                 <div class="slider-slide">
                   <div class="swiper swiper-mini" id="car-slider">
@@ -1075,7 +1093,7 @@
                     <div class="swiper-scrollbar"></div>
                   </div>
                   <div class="swiper-mini-info">
-                                      <div class="company__tags">
+                   <div class="company__tags">
                     <div class="company__tag">
                       <img src="./temple/images/icons/verify.svg" alt="" />
                       <h3 class="verify">Проверенный</h3>
@@ -1101,28 +1119,24 @@
                       Bentley Continental GT Convertible 2022
                     </h2>
                     <div class="swiper-mini-detals">
+
                       <div class="detal-block">
-                        <img
-                          src="/public/temple/images/landing/car_detals/Mask group-1.svg"
+                        <div class="img__width">
+                          <img
+                          src="/public/temple/images/landing/car_detals/location.svg"
                           alt=""
                         />
+                        </div>
                         <div>
                           <h5>Расположение</h5>
                           <h3>Дубай</h3>
                         </div>
                       </div>
+
                       <div class="detal-block">
-                        <img
-                          src="/public/temple/images/landing/car_detals/Mask group-3.svg"
-                          alt=""
-                        />
-                        <div>
-                          <h5>Тип автомобиля</h5>
-                          <h3>Люкс</h3>
-                        </div>
-                      </div>
-                      <div class="detal-block">
-                            <img src="/public/temple/images/landing/car_detals/Mask group-1.svg" alt="">
+                           <div class="img__width">
+                            <img src="/public/temple/images/landing/car_detals/mest.svg" alt="">
+                           </div>
 
                         <div>
                           <h5>Количество мест</h5>
@@ -1130,10 +1144,12 @@
                         </div>
                       </div>
                       <div class="detal-block">
-                        <img
+                        <div class="img__width">
+                          <img
                           src="/public/temple/images/landing/car_detals/depozit.svg"
                           alt=""
                         />
+                        </div>
                         <div>
                           <h5>Страховой депозит</h5>
                           <h3>5,000 AED</h3>
@@ -1141,7 +1157,10 @@
                       </div>
 
                       <div class="detal-block">
-                            <img src="/public/temple/images/landing/car_detals/Mask group-2.svg" alt="">
+                            <div class="img__width">
+                              <img src="/public/temple/images/landing/car_detals/age.svg" alt="">
+                            </div>
+
                         <div>
                           <h5>Возраст</h5>
                           <h3>от 18 лет</h3>
@@ -1149,11 +1168,13 @@
                       </div>
 
                       <div class="detal-block">
+                       <div class="img__width">
                         <img
-                          width="22px"
-                          src="/temple/images/car/characteristic/speed.svg"
-                          alt=""
-                        />
+                        width="22px"
+                        src="/temple/images/car/characteristic/speed.svg"
+                        alt=""
+                      />
+                       </div>
                         <div>
                           <h5>Разгон 0-100 км/ч</h5>
                           <h3>4.9 сек</h3>
@@ -1212,62 +1233,63 @@
       <div class="brands_swiper swiper-container">
         <div class="swiper-wrapper">
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask grouplambo.svg" alt="" />
-            <h1>lamborgini</h1>
+            <img src="/assets/brands/lambo.svg" alt="Lamborghini" />
+            <h1>Lamborghini</h1>
           </div>
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask groupferrari.svg" alt="" />
-            <h1>ferrari</h1>
+            <img src="/assets/brands/ferrari.svg" alt="Ferrari" />
+            <h1>Ferrari</h1>
           </div>
           <div class="logo-block swiper-slide bentley">
-            <img src="/assets/brands/Mask groupbentley.svg" alt="" />
-            <h1>bentley</h1>
+            <img src="/assets/brands/bentley.svg" alt="Bentley" />
+            <h1>Bentley</h1>
           </div>
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask groupbugati.svg" alt="" />
-            <h1>bugatti</h1>
+            <img src="/assets/brands/bugatti.svg" alt="Bugatti" />
+            <h1>Bugatti</h1>
           </div>
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask groupmers.svg" alt="" />
-            <h1>mercedes</h1>
+            <img src="/assets/brands/mers.svg" alt="Mercedes" />
+            <h1>Mercedes</h1>
           </div>
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask groupbmw.svg" alt="" />
-            <h1>bmw</h1>
+            <img src="/assets/brands/bmw.svg" alt="BMW" />
+            <h1>BMW</h1>
           </div>
           <div class="logo-block swiper-slide audi">
-            <img src="/assets/brands/Mask groupaudi.svg" alt="" />
-            <h1>audi</h1>
+            <img src="/assets/brands/audi.svg" alt="Audi" />
+            <h1>Audi</h1>
           </div>
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask grouplambo.svg" alt="" />
-            <h1>lamborgini</h1>
+            <img src="/assets/brands/lambo.svg" alt="Lamborghini" />
+            <h1>Lamborghini</h1>
           </div>
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask groupferrari.svg" alt="" />
-            <h1>ferrari</h1>
+            <img src="/assets/brands/ferrari.svg" alt="Ferrari" />
+            <h1>Ferrari</h1>
           </div>
           <div class="logo-block swiper-slide bentley">
-            <img src="/assets/brands/Mask groupbentley.svg" alt="" />
-            <h1>bentley</h1>
+            <img src="/assets/brands/bentley.svg" alt="Bentley" />
+            <h1>Bentley</h1>
           </div>
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask groupbugati.svg" alt="" />
-            <h1>bugatti</h1>
+            <img src="/assets/brands/bugatti.svg" alt="Bugatti" />
+            <h1>Bugatti</h1>
           </div>
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask groupmers.svg" alt="" />
-            <h1>mercedes</h1>
+            <img src="/assets/brands/mers.svg" alt="Mercedes" />
+            <h1>Mercedes</h1>
           </div>
           <div class="logo-block swiper-slide">
-            <img src="/assets/brands/Mask groupbmw.svg" alt="" />
-            <h1>bmw</h1>
+            <img src="/assets/brands/bmw.svg" alt="BMW" />
+            <h1>BMW</h1>
           </div>
           <div class="logo-block swiper-slide audi">
-            <img src="/assets/brands/Mask groupaudi.svg" alt="" />
-            <h1>audi</h1>
+            <img src="/assets/brands/audi.svg" alt="Audi" />
+            <h1>Audi</h1>
+          </div>
         </div>
-      </div>
+        
     </section>
 
     <section class="services">
@@ -1420,6 +1442,12 @@
               </div>
               <p>
                 Аренда роскошных суперкаров предлагает доставку по запросу до
+                вашего местоположения (просмотреть места быстрой доставки) в
+                пределах Дубай. Тем не менее, бесплатный самовывоз из их филиала
+                в г. Шейх Заид Роуд доступен в рабочее время.    Аренда роскошных суперкаров предлагает доставку по запросу до
+                вашего местоположения (просмотреть места быстрой доставки) в
+                пределах Дубай. Тем не менее, бесплатный самовывоз из их филиала
+                в г. Шейх Заид Роуд доступен в рабочее время.    Аренда роскошных суперкаров предлагает доставку по запросу до
                 вашего местоположения (просмотреть места быстрой доставки) в
                 пределах Дубай. Тем не менее, бесплатный самовывоз из их филиала
                 в г. Шейх Заид Роуд доступен в рабочее время.

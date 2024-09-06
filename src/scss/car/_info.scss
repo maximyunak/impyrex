@@ -636,6 +636,11 @@
           background-color: $acent;
         }
 
+        .test {
+          display: flex;
+          flex-direction: column;
+        }
+
         h3 {
           font-size: 16px;
         }
@@ -734,13 +739,9 @@
       border-radius: 10px;
       cursor: pointer;
       position: relative;
-      height: 60px;
-      // display: flex;
-      // align-items: center;
-      // height: auto;
-      transition: 0.3s;
       padding: 0 31px;
       overflow: hidden;
+      padding: 20px 31px 19px 31px;
 
       &:hover {
         background-color: $acent;
@@ -750,9 +751,15 @@
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
-        height: 60px;
 
         // background-color: #fff;
+      }
+      @media (max-width: 600px) {
+        padding: 15px 10px;
+      }
+
+      @media (max-width: 397px) {
+        padding: 10px 15px;
       }
 
       h1 {
@@ -770,27 +777,20 @@
         }
       }
       p {
-        // position: absolute;
+        margin-top: 15px;
+        // padding-bottom: 15px;
         display: none;
-        // margin-top: 15px;
-        padding-bottom: 15px;
-        top: 65px;
-        height: 0;
-        // opacity: 0;
-        // visibility: hidden;
-        overflow: hidden;
-        // display: none;
-        // max-width: 1200px;
+
         max-width: 90%;
-        // visibility: hidden;
-        // opacity: 0;
-        transition: 0.3s;
+
         font-size: 18px;
         font-weight: 550;
         line-height: 21.8px;
+        overflow: hidden;
         letter-spacing: 0.3px;
         @media (max-width: 600px) {
           font-size: 15px;
+          margin-top: 7px;
         }
         @media (max-width: 374px) {
           font-size: 12px;
@@ -798,42 +798,8 @@
       }
 
       &.active {
-        height: 185px;
         img {
           transform: rotate(0deg);
-        }
-        p {
-          display: block;
-          // opacity: 1;
-          // visibility: visible;
-          height: 190px;
-          @media (max-width: 460px) {
-            margin-top: -10px;
-          }
-          @media (max-width: 1025px) {
-            // margin-top: 10px;
-          }
-        }
-        @media (max-width: 1400px) {
-          height: 150px;
-        }
-        @media (max-width: 1025px) {
-          height: 180px;
-        }
-        @media (max-width: 620px) {
-          height: 210px;
-        }
-        @media (max-width: 600px) {
-          height: 190px;
-        }
-        @media (max-width: 480px) {
-          height: 230px;
-        }
-        @media (max-width: 460px) {
-          height: 220px;
-        }
-        @media (max-width: 415px) {
-          height: 240px;
         }
       }
     }
@@ -1037,4 +1003,9 @@
 .pluses__block.show {
   opacity: 1;
   visibility: visible;
+}
+
+#show-more {
+  font-size: 15px;
+  font-weight: 500;
 }
