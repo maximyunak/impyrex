@@ -1,4 +1,4 @@
-// import "../../scss/index/landing.scss";
+import "../../scss/index/landing.scss";
 import "/src/js/custom/faq/faq.js";
 import "../custom/slider-simular/sliderSimular";
 
