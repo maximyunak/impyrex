@@ -1,11 +1,10 @@
-@import "../utils/variables.scss";
+@import '../utils/variables.scss';
 
 .type {
   &__car {
     border: 1px solid transparent;
 
     &:hover {
-      //   background-color: $darkgray;
       border: 1px solid #e4ddd5;
       background: #fff;
     }
@@ -21,7 +20,6 @@
     }
 
     h3 {
-      // margin-top: 14px;
       font-weight: 550;
       font-size: 24px;
       text-transform: uppercase;
